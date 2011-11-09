@@ -25,13 +25,13 @@ system administrators and priorities for this configuration
 
 %files
 %{_sysconfdir}/dbus-1/system.d/org.kde.polkitkde1.helper.conf
-%{_libdir}/kde4/kcm_polkitactions.so
-%{_libdir}/kde4/kcm_polkitconfig.so
-%{_libdir}/kde4/libexec/polkitkde1helper
-%{_datadir}/dbus-1/system-services/org.kde.polkitkde1.helper.service
-%{_datadir}/kde4/services/kcm_polkitactions.desktop
-%{_datadir}/kde4/services/kcm_polkitconfig.desktop
-%{_datadir}/kde4/services/settings-system-policies.desktop
+%{_kde_libdir}/kde4/kcm_polkitactions.so
+%{_kde_libdir}/kde4/kcm_polkitconfig.so
+%{_kde_libdir}/kde4/libexec/polkitkde1helper
+%{_kde_datadir}/dbus-1/system-services/org.kde.polkitkde1.helper.service
+%{_kde_datadir}/kde4/services/kcm_polkitactions.desktop
+%{_kde_datadir}/kde4/services/kcm_polkitconfig.desktop
+%{_kde_datadir}/kde4/services/settings-system-policies.desktop
 %{_datadir}/polkit-1/actions/org.kde.polkitkde1.policy
 
 #--------------------------------------------------------------------
@@ -43,7 +43,7 @@ Group:           System/Libraries
 KDE 4 core library.
 
 %files -n %{libname}
-%{_libdir}/libpolkitkdekcmodulesprivate.so.%{major}*
+%{_kde_libdir}/libpolkitkdekcmodulesprivate.so.%{major}*
 
 #--------------------------------------------------------------------
 %package devel
@@ -56,7 +56,7 @@ Requires:        %{libname} = %{version}-%{release}
 Development files for polkit-kde-kcmodules-1.
 
 %files devel
-%{_libdir}/libpolkitkdekcmodulesprivate.so
+%{_kde_libdir}/libpolkitkdekcmodulesprivate.so
 
 #--------------------------------------------------------------------
 %prep
@@ -67,7 +67,6 @@ Development files for polkit-kde-kcmodules-1.
 %make
 
 %install
-rm -rf %buildroot
 %makeinstall_std -C build
 
 

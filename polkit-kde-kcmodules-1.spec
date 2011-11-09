@@ -47,7 +47,7 @@ KDE 4 core library.
 #--------------------------------------------------------------------
 %package devel
 Summary:         Polkit KDE Modules Development
-Group:           Development/KDE
+Group:           Development/KDE and Qt
 Requires:        kdelibs4-devel
 Requires:        %{libname} = %{version}-%{release}
 

@@ -4,7 +4,6 @@
 %define major 0
 %define libname %mklibname polkitkdekcmodulesprivate %{major}
 
-
 Name:            polkit-kde-kcmodules-1
 Summary:         PolicyKit KDE Configuration
 Group:           Graphical desktop/KDE
@@ -33,6 +32,7 @@ system administrators and priorities for this configuration
 %{_datadir}/polkit-1/actions/org.kde.polkitkde1.policy
 
 #--------------------------------------------------------------------
+
 %package -n %{libname}
 Summary:         KDE 4 core library
 Group:           System/Libraries
@@ -44,6 +44,7 @@ KDE 4 core library.
 %{_kde_libdir}/libpolkitkdekcmodulesprivate.so.%{major}*
 
 #--------------------------------------------------------------------
+
 %package devel
 Summary:         Polkit KDE Modules Development
 Group:           Development/KDE and Qt
@@ -57,6 +58,7 @@ Development files for polkit-kde-kcmodules-1.
 %{_kde_libdir}/libpolkitkdekcmodulesprivate.so
 
 #--------------------------------------------------------------------
+
 %prep
 %setup -q%{?git:n %{name}}
 

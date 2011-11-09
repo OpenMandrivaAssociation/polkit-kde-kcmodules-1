@@ -9,13 +9,14 @@ Name:            polkit-kde-kcmodules-1
 Summary:         PolicyKit KDE Configuration
 Group:           Graphical desktop/KDE
 Version:         1.0.0
-Release:         %mkrel -c git%{gitdate} 1
+Release:         0.3
 License:         GPL
 URL:             https://projects.kde.org/projects/extragear/base/%{name}
 # http://anongit.kde.org/polkit-kde-kcmodules-1/polkit-kde-kcmodules-1-latest.tar.gz
 Source0:         %{name}%{?!git:-%{version}}.tar.xz
 BuildRequires:   polkit-qt-1-devel >= 0.98.1
 BuildRequires:   kdelibs4-devel
+Requires:	%{libname} = %{version}-%{release}
 
 %description
 From this module, you can configure PolicyKit action policies,
@@ -23,13 +24,13 @@ system administrators and priorities for this configuration
 
 %files
 %{_sysconfdir}/dbus-1/system.d/org.kde.polkitkde1.helper.conf
-%{_kde_libdir}/kde4/kcm_polkitactions.so
-%{_kde_libdir}/kde4/kcm_polkitconfig.so
-%{_kde_libdir}/kde4/libexec/polkitkde1helper
-%{_kde_datadir}/dbus-1/system-services/org.kde.polkitkde1.helper.service
-%{_kde_datadir}/kde4/services/kcm_polkitactions.desktop
-%{_kde_datadir}/kde4/services/kcm_polkitconfig.desktop
-%{_kde_datadir}/kde4/services/settings-system-policies.desktop
+%{_libdir}/kde4/kcm_polkitactions.so
+%{_libdir}/kde4/kcm_polkitconfig.so
+%{_libdir}/kde4/libexec/polkitkde1helper
+%{_datadir}/dbus-1/system-services/org.kde.polkitkde1.helper.service
+%{_datadir}/kde4/services/kcm_polkitactions.desktop
+%{_datadir}/kde4/services/kcm_polkitconfig.desktop
+%{_datadir}/kde4/services/settings-system-policies.desktop
 %{_datadir}/polkit-1/actions/org.kde.polkitkde1.policy
 
 #--------------------------------------------------------------------

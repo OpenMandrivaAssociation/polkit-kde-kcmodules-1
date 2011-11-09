@@ -22,15 +22,15 @@ From this module, you can configure PolicyKit action policies,
 system administrators and priorities for this configuration
 
 %files
-%{_kde_sysconfdir}/dbus-1/system.d/org.kde.polkitkde1.helper.conf
+%{_sysconfdir}/dbus-1/system.d/org.kde.polkitkde1.helper.conf
 %{_kde_libdir}/kde4/kcm_polkitactions.so
 %{_kde_libdir}/kde4/kcm_polkitconfig.so
 %{_kde_libdir}/kde4/libexec/polkitkde1helper
-%{_kde_datadir}/dbus-1/system-services/org.kde.polkitkde1.helper.service
+%{_datadir}/dbus-1/system-services/org.kde.polkitkde1.helper.service
 %{_kde_datadir}/kde4/services/kcm_polkitactions.desktop
 %{_kde_datadir}/kde4/services/kcm_polkitconfig.desktop
 %{_kde_datadir}/kde4/services/settings-system-policies.desktop
-%{_kde_datadir}/polkit-1/actions/org.kde.polkitkde1.policy
+%{_datadir}/polkit-1/actions/org.kde.polkitkde1.policy
 
 #--------------------------------------------------------------------
 %package -n %{libname}

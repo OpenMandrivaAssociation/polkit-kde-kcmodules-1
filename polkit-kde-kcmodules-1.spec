@@ -15,6 +15,7 @@ URL:             https://projects.kde.org/projects/extragear/base/%{name}
 Source0:         %{name}%{?!git:-%{version}}.tar.xz
 BuildRequires:   polkit-qt-1-devel >= 0.98.1
 BuildRequires:   kdelibs4-devel
+Requires:        %{libname} = %{version}-%{release}
 
 %description
 From this module, you can configure PolicyKit action policies,

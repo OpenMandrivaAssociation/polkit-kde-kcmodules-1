@@ -8,7 +8,7 @@ Name:            polkit-kde-kcmodules-1
 Summary:         PolicyKit KDE Configuration
 Group:           Graphical desktop/KDE
 Version:         1.0.0
-Release:         0.3
+Release:         0.4
 License:         GPL
 URL:             https://projects.kde.org/projects/extragear/base/%{name}
 # http://anongit.kde.org/polkit-kde-kcmodules-1/polkit-kde-kcmodules-1-latest.tar.gz

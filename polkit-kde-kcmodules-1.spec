@@ -13,6 +13,7 @@ License:         GPL
 URL:             https://projects.kde.org/projects/extragear/base/%{name}
 # http://anongit.kde.org/polkit-kde-kcmodules-1/polkit-kde-kcmodules-1-latest.tar.gz
 Source0:         %{name}%{?!git:-%{version}}.tar.xz
+BuildRequires:	make
 BuildRequires:   polkit-qt-1-devel >= 0.98.1
 BuildRequires:   kdelibs4-devel
 Requires:        %{libname} = %{version}-%{release}
